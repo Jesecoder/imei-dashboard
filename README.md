@@ -15,7 +15,6 @@ A Dashboard for IMEI services including features such as IMEI check, order histo
 - **Next.js**: For server-side rendering and routing.
 - **Tailwind CSS**: For styling the components.
 - **Chart.js**: For data visualization.
-- **Supabase**: For backend services and authentication.
 
 ## Setup
 
