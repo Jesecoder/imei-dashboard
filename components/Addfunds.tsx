@@ -1,4 +1,3 @@
-// components/AddFunds.tsx
 import React, { useState } from 'react';
 
 const Addfunds: React.FC = () => {
@@ -21,8 +20,9 @@ const Addfunds: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!error && amount >= 5 && amount <= 500) {
-      const totalAmount = amount + amount * 0.05;
+    const parsedAmount = typeof amount === 'string' ? parseFloat(amount) : amount;
+    if (!error && parsedAmount >= 5 && parsedAmount <= 500) {
+      const totalAmount = parsedAmount + parsedAmount * 0.05;
       alert(`You will be charged $${totalAmount.toFixed(2)} including 5% processing fee.`);
       // Aquí puedes manejar la lógica de pago
     }
