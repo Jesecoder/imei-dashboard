@@ -1,5 +1,14 @@
 // components/StatCard.tsx
-const StatCard = ({ title, value, description, icon }) => {
+import { ReactNode } from 'react';
+
+interface StatCardProps {
+  title: string;
+  value: string | number;
+  description?: string;
+  icon: ReactNode;
+}
+
+const StatsCard: React.FC<StatCardProps> = ({ title, value, description, icon }) => {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md flex items-center">
       <div className="p-3 bg-blue-500 rounded-full text-white">
@@ -14,5 +23,5 @@ const StatCard = ({ title, value, description, icon }) => {
   );
 };
 
-export default StatCard;
+export default StatsCard;
 
